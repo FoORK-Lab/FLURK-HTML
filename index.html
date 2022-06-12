@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KARTHIK LAL</title>
+
+    <!-- Favicons -->
+    <link href="images/favi-icon/karthik.png" rel="icon">
+    <link href="images/favi-icon/karthik-icon.png" rel="karthik-icon">
+
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<!-- snow-flake 
+<div id="fa-snowflake">
+</div> -->
+
+<!-- preloaderx-->
+<div id="preloaderx">
+  <div class="preloadertext">“Good-bye and hello, as always.”</div>
+</div>
+
+<!-- navbar section starts  -->
+
+<nav class="navbar">
+  <a href="index.html"> <i class="fas fa-home"></i> <span>Home</span> </a>
+  <a href="about.html"> <i class="fas fa-user"></i> <span>About</span> </a>
+  <a href="works.html"> <i class="fas fa-briefcase"></i> <span>Works</span> </a>
+  <a href="blogs.html"> <i class="fas fa-blog"></i> <span>Blogs</span> </a>
+  <a href="contact.html"> <i class="fas fa-address-book"></i> <span>Contact</span> </a>
+</nav>
+
+<!-- navbar section ends -->
+
+<!-- home section starts  -->
+
+<section class="home">
+
+    <div class="image">
+        <img src="images/user/user.jpg" alt="">
+    </div>
+
+    <div class="content">
+      <div id="typed-strings">
+        <p>Hi,<strong> I Am KARTHIK LAL </strong></p>
+        <p> <strong> Security Researcher | Certified Ethical Hacker | Graphics Designer | Web Developer | Linux Kernel Developer </strong> </p>
+      </div>
+        <span id="typed"></span>
+    </div>
+        <a href="./about.html" class="btn"> About Me <i class="fas fa-user-lock"></i> </a>
+        <a href="https://behance.net/karthik558" class="btn_2"> Portfolio <i class="fab fa-behance"></i></a>
+      </div>
+    </div>
+
+</section>
+
+<script src="js/security.js"></script>
+<!--<script src="js/sflake.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="node_modules/typed.js/lib/typed.min.js"></script>
+<script>
+  var typed = new Typed('#typed', {
+    stringsElement: '#typed-strings'
+  });
+</script>
+<script src="js/pace.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+<script>
+  paceOptions = {
+  ajax: true,
+  document: true,
+  eventLag: false
+  };
+
+  Pace.on('done', function() {
+  $('.p').delay(330).animate({top: '30%', opacity: '0'}, 3000, $.bez([0.19,1,0.22,1]));
+
+  $('#preloaderx').delay(180).animate({top: '-100%'}, 2000, $.bez([0.19,1,0.22,1]));
+
+  TweenMax.from(".title", 2, {
+       delay: 0.5,
+            y: 10,
+            opacity: 0,
+            ease: Expo.easeInOut
+      })
+ });
+</script>
+
+<script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+    
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+    
+          var hash = this.hash;
+    
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+    
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
+    </script>
+
+<!-- home section ends -->
+
+</body>
+</html>
